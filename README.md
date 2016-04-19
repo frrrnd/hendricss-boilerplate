@@ -1,12 +1,13 @@
 # Hendricss
 Hendricss is my personal boilerplate for simple webpages.
 This boileplate contain's:
-    - [Sass (scss)](http://sass-lang.com/);
-    - [Jade](http://jade-lang.com/);
-    - [Gulp](http://gulpjs.com/);
-    - [Browser-sync](https://www.browsersync.io/);
-    - [Normalize.css] (with border-sizing: border-box;) (https://necolas.github.io/normalize.css/);
-    - [Jeet (Grid System)](http://jeet.gs/);
+
+* [Sass (scss)](http://sass-lang.com/);
+* [Jade](http://jade-lang.com/);
+* [Gulp](http://gulpjs.com/);
+* [Browser-sync](https://www.browsersync.io/);
+* [Normalize.css] (with border-sizing: border-box;) (https://necolas.github.io/normalize.css/);
+* [Jeet (Grid System)](http://jeet.gs/);
 
 ## Install Dependencies
 ```$ npm install```
