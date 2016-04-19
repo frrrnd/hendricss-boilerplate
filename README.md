@@ -6,7 +6,7 @@ This boileplate contain's:
 * [Jade](http://jade-lang.com/);
 * [Gulp](http://gulpjs.com/);
 * [Browser-sync](https://www.browsersync.io/);
-* [Normalize.css] (with border-sizing: border-box;) (https://necolas.github.io/normalize.css/);
+* [Normalize.css](https://necolas.github.io/normalize.css/) with border-sizing: border-box;
 * [Jeet (Grid System)](http://jeet.gs/);
 
 ## Install Dependencies
