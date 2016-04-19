@@ -1,0 +1,32 @@
+// Font size in REM with fallback // -------------------------------------------------------
+// Usage: @include font-size(14px)
+
+@function calculateRem($size) {
+  	$remSize: $size / 16px;
+  	@return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  	font-size: $size;
+  	font-size: calculateRem($size);
+}
+
+// Breakpoints // --------------------------------------------------------------------------
+
+@mixin large {
+	@media only screen and (max-width: $responsive-size-large) {
+	   	@content;
+	}
+}
+
+@mixin medium {
+	@media only screen and (max-width: $responsive-size-medium) {
+	    @content;
+	}
+}
+
+@mixin small {
+	@media only screen and (max-width: $responsive-size-small) {
+	    @content;
+	}
+}

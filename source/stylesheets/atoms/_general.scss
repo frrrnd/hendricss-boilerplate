@@ -1,0 +1,16 @@
+body {
+    font-family: $default-text-paragraph;
+    color: #333333;
+}
+
+.wrap {
+	max-width: $wrap-site-size;
+	width: 100%;
+	@extend %element-center;
+
+	&:after {
+		width: 100%;
+		display: block;
+		clear: both;
+	}
+}

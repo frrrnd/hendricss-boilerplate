@@ -1,0 +1,44 @@
+// Reset Buttons // --------------------------------------------------------------------------
+
+
+%btn-default {
+	border: none;
+	padding: 10px 20px;
+	color: #fff;
+	outline: none;
+	transition: .4s;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	clear: both;
+	text-align: center;
+}
+
+.btn {
+	@extend %btn-default;
+
+	&--primary {
+		background-color: #333333;
+		@extend %element-center;
+		max-width: 280px;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 18px;
+
+		&:hover {
+			background-color: darken(#333333, 5);
+		}
+	}
+
+	&--secondary {
+		background-color: $color-secondary;
+		@extend %element-center;
+
+		&:hover {
+			background-color: darken($color-secondary, 5);
+		}
+	}
+
+	&--is-disabled {
+		background-color: #eee;
+	}
+}

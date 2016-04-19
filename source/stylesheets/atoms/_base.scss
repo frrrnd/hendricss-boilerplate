@@ -1,0 +1,55 @@
+
+// Site general. // -------------------------------------------------------
+
+$wrap-site-size: 1080px;
+
+$color-primary: #F85B64;
+$color-secondary: #0B2C52;
+
+
+// Responsive. // -------------------------------------------------------
+
+$responsive-size-large: 60em;
+$responsive-size-medium: 40em;
+$responsive-size-small: 30em;
+
+// Texts and Headings. // ------------------------------------------------
+
+$default-text-paragraph: 'Roboto', sans-serif;
+$default-text-heading: 'Roboto', sans-serif;
+
+$hs: (
+	h1: 30px,
+	h2: 28px,
+	h3: 25px,
+	h4: 20px,
+	h5: 18px,
+	h6: 15px
+	);
+
+$paragraph-font-size: 16px;
+
+
+
+// Colors. // -----------------------------------------------------------
+
+$color-scheme: (
+
+	);
+
+$others-colors: (
+
+	);
+
+$default-color-text: #333333;
+$default-color-heading: #CCCCCC;
+
+$default-color-links: red;
+$default-color-links-hover: blue;
+
+
+// Messages. // ---------------------------------------------------------
+
+$default-message-sucess: green;
+$default-message-error: red;
+$default-message-warning: yellow;

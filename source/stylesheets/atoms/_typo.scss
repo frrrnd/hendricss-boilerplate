@@ -1,0 +1,50 @@
+%paragraph-text {
+	font-family: $default-text-paragraph;
+	line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+}
+
+h1 {
+	font-size: map-get($hs, h1);
+}
+
+h2 {
+	font-size: map-get($hs, h2);
+}
+
+h3 {
+	font-size: map-get($hs, h3);
+}
+
+h4 {
+	font-size: map-get($hs, h4);
+}
+
+h5 {
+	font-size: map-get($hs, h5);
+}
+
+h6 {
+	font-size: map-get($hs, h6);
+}
+
+
+p {
+	@extend %paragraph-text;
+}
+
+.sec-title {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $color-secondary;
+}

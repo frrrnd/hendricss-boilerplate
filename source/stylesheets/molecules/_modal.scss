@@ -1,0 +1,32 @@
+#lean_overlay {
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background-color: rgba(0,0,0,.9);
+    display: none;
+}
+
+#adicionar-fotos {
+    display: none;
+    background: #fff;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
+    padding: 20px;
+
+    h6 {
+        font-weight: normal;
+        margin: 0;
+        font-size: 24px;
+    }
+}
+
+.modal_close {
+    float: right;
+    font-size: 25px;
+    color: #333;
+}
