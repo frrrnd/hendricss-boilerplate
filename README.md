@@ -8,6 +8,7 @@ This boileplate contain's:
 * [Browser-sync](https://www.browsersync.io/);
 * [Normalize.css](https://necolas.github.io/normalize.css/) with border-sizing: border-box;
 * [Jeet (Grid System)](http://jeet.gs/);
+* Image optimization
 
 ## Install Dependencies
 ```$ npm install```
@@ -27,6 +28,7 @@ project -
                 style.css
         index.html
     /src -
+        /images
         /jade
             index.jade
         /javascripts

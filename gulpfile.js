@@ -14,6 +14,7 @@ var minifyCSS    = require('gulp-minify-css');
 var browserSync  = require('browser-sync');
 var gutil        = require('gulp-util');
 var sourcemaps   = require('gulp-sourcemaps');
+var imageop      = require('gulp-image-optimization');
 
 
 /*
@@ -68,6 +69,18 @@ gulp.task('scripts', function() {
 });
 
 /*
+  Image optimization.
+ */
+
+gulp.task('images', function(cb) {
+    gulp.src(['source/images/**/*.png','source/images/**/*.jpg','source/images/**/*.gif','source/images/**/*.jpeg']).pipe(imageop({
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true
+    })).pipe(gulp.dest('build/assets/images')).on('end', cb).on('error', cb);
+});
+
+/*
 	Watch tasks.
 */
 
@@ -75,6 +88,7 @@ gulp.task('watch', function() {
   gulp.watch('source/stylesheets/**/*.scss', ['styles']);
   gulp.watch('source/javascripts/**/*.js', ['scripts']);
   gulp.watch('source/jade/*.jade', ['html']);
+  gulp.watch('source/images/**/*', ['images']);
 });
 
 
