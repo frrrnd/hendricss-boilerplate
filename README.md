@@ -1,5 +1,5 @@
-# Hendricss
-Hendricss is my personal boilerplate for simple webpages.
+# Hendricss Boilerplate
+☠️ Hendricss is my personal boilerplate for simple webpages.
 This boileplate contain's:
 
 * [Sass (scss)](http://sass-lang.com/);
@@ -44,3 +44,7 @@ project -
     gulpfile.js
     package.json
 ```
+
+## License
+
+MIT. See /LICENSE
