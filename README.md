@@ -45,6 +45,10 @@ project -
     package.json
 ```
 
+## Checklist
+- [] Change Jade to Pug
+- [] Turn gulpfile in ES 6
+
 ## License
 
 MIT. See /LICENSE
