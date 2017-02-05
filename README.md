@@ -46,8 +46,8 @@ project -
 ```
 
 ## Checklist
-- [] Change Jade to Pug
-- [] Turn gulpfile in ES 6
+- [ ] Change Jade to Pug
+- [ ] Turn gulpfile in ES 6
 
 ## License
 
