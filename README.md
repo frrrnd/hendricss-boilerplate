@@ -14,7 +14,7 @@ This boileplate contain's:
 ```$ npm install```
 
 ## Run tasks
-```$ gulp```
+```$ npm run gulp```
 
 ## Files and Folders
 ```
