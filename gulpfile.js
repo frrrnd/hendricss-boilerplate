@@ -28,7 +28,7 @@ var src = {
   img: srcRoot + 'images/',
   js: srcRoot + 'javascripts/',
   pug: srcRoot + 'pug/',
-  css: srcRoot + 'stylesheets',
+  css: srcRoot + 'stylesheets/',
 };
 
 var build = {
