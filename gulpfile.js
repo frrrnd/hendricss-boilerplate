@@ -44,7 +44,7 @@ var build = {
 gulp.task('browser-sync', ['html', 'styles', 'scripts'], function() {
   browserSync({
     server: {
-      baseDir: './build'
+      baseDir: buildRoot
     }
   })
 });
@@ -54,12 +54,12 @@ gulp.task('browser-sync', ['html', 'styles', 'scripts'], function() {
 */
 
 gulp.task('html', function() {
-  return gulp.src('source/pug/index.pug')
+  return gulp.src(src.pug + 'index.pug')
   .pipe(pug({
     pretty: true
     }))
   .pipe(browserSync.reload({stream:true}))
-  .pipe(gulp.dest('build'))
+  .pipe(gulp.dest(buildRoot))
   });
 
 /*
@@ -69,11 +69,11 @@ gulp.task('html', function() {
 */
 
 gulp.task('styles', function() {
-  return gulp.src('source/stylesheets/**/*.scss')
+  return gulp.src(src.css + 'style.scss')
   .pipe(sass())
   .pipe(minifyCSS())
   .pipe(browserSync.reload({stream:true}))
-  .pipe(gulp.dest('build/assets/stylesheets'));
+  .pipe(gulp.dest(build.css));
 });
 
 /*
@@ -81,11 +81,11 @@ gulp.task('styles', function() {
 */
 
 gulp.task('scripts', function() {
-  return gulp.src('source/javascripts/**/*.js')
+  return gulp.src(src.js + '**/*.js')
       .pipe(concat('app.js'))
       .pipe(uglify())
       .pipe(browserSync.reload({stream:true}))
-      .pipe(gulp.dest('build/assets/javascripts'));
+      .pipe(gulp.dest(build.js));
 });
 
 /*
@@ -93,11 +93,11 @@ gulp.task('scripts', function() {
  */
 
 gulp.task('images', function(cb) {
-    gulp.src(['source/images/**/*.png','source/images/**/*.jpg','source/images/**/*.gif','source/images/**/*.jpeg']).pipe(imageop({
+    gulp.src([src.img + '**/*.png',src.img + '**/*.jpg',src.img + '**/*.gif',src.img + '**/*.jpeg']).pipe(imageop({
         optimizationLevel: 5,
         progressive: true,
         interlaced: true
-    })).pipe(gulp.dest('build/assets/images')).on('end', cb).on('error', cb);
+    })).pipe(gulp.dest(build.img)).on('end', cb).on('error', cb);
 });
 
 /*
@@ -105,10 +105,10 @@ gulp.task('images', function(cb) {
 */
 
 gulp.task('watch', function() {
-  gulp.watch('source/stylesheets/**/*.scss', ['styles']);
-  gulp.watch('source/javascripts/**/*.js', ['scripts']);
-  gulp.watch('source/pug/*.pug', ['html']);
-  gulp.watch('source/images/**/*', ['images']);
+  gulp.watch(src.css + '**/*.scss', ['styles']);
+  gulp.watch(src.js + '**/*.js', ['scripts']);
+  gulp.watch(src.pug + '*.pug', ['html']);
+  gulp.watch(src.img + '**/*', ['images']);
 });
 
 /*
