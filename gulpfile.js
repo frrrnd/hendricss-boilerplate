@@ -17,6 +17,24 @@ var gulp         = require('gulp'),
     sourcemaps   = require('gulp-sourcemaps'),
     imageop      = require('gulp-image-optimization');
 
+/*
+  Set paths.
+*/
+
+var srcRoot = './source/',
+    buildRoot = './build/';
+
+var src = {
+  img: srcRoot + 'images/',
+  js: srcRoot + 'javascripts/',
+  pug: srcRoot + 'pug/',
+  css: srcRoot + 'stylesheets',
+};
+
+var build = {
+  js: buildRoot + 'assets/javascripts/',
+  css: buildRoot + 'assets/stylesheets/',
+}
 
 /*
 	Browser sync reload.
