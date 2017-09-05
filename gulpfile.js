@@ -4,18 +4,18 @@
 
 'use strict';
 
-var gulp         = require('gulp');
-var pug          = require('gulp-pug');
-var sass         = require('gulp-sass');
-var clean        = require('gulp-clean');
-var watch        = require('gulp-watch');
-var concat       = require('gulp-concat');
-var uglify       = require('gulp-uglify');
-var minifyCSS    = require('gulp-minify-css');
-var browserSync  = require('browser-sync');
-var gutil        = require('gulp-util');
-var sourcemaps   = require('gulp-sourcemaps');
-var imageop      = require('gulp-image-optimization');
+var gulp         = require('gulp'),
+    pug          = require('gulp-pug'),
+    sass         = require('gulp-sass'),
+    clean        = require('gulp-clean'),
+    watch        = require('gulp-watch'),
+    concat       = require('gulp-concat'),
+    uglify       = require('gulp-uglify'),
+    minifyCSS    = require('gulp-minify-css'),
+    browserSync  = require('browser-sync'),
+    gutil        = require('gulp-util'),
+    sourcemaps   = require('gulp-sourcemaps'),
+    imageop      = require('gulp-image-optimization');
 
 
 /*
