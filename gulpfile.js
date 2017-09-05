@@ -34,6 +34,7 @@ var src = {
 var build = {
   js: buildRoot + 'assets/javascripts/',
   css: buildRoot + 'assets/stylesheets/',
+  img: buildRoot + 'assets/images/',
 }
 
 /*
