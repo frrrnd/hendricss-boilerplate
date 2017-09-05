@@ -5,7 +5,7 @@
 'use strict';
 
 var gulp         = require('gulp');
-var jade         = require('gulp-jade');
+var pug          = require('gulp-pug');
 var sass         = require('gulp-sass');
 var watch        = require('gulp-watch');
 var concat       = require('gulp-concat');
@@ -21,7 +21,7 @@ var imageop      = require('gulp-image-optimization');
 	Browser sync reload.
 */
 
-gulp.task('browser-sync', ['styles', 'scripts'], function() {
+gulp.task('browser-sync', ['html', 'styles', 'scripts'], function() {
   browserSync({
     server: {
       baseDir: './build'
@@ -30,12 +30,12 @@ gulp.task('browser-sync', ['styles', 'scripts'], function() {
 });
 
 /*
-  Jade.
+  pug.
 */
 
 gulp.task('html', function() {
-  return gulp.src('source/jade/*.jade')
-  .pipe(jade({
+  return gulp.src('source/pug/index.pug')
+  .pipe(pug({
     pretty: true
     }))
   .pipe(browserSync.reload({stream:true}))
@@ -87,7 +87,7 @@ gulp.task('images', function(cb) {
 gulp.task('watch', function() {
   gulp.watch('source/stylesheets/**/*.scss', ['styles']);
   gulp.watch('source/javascripts/**/*.js', ['scripts']);
-  gulp.watch('source/jade/*.jade', ['html']);
+  gulp.watch('source/pug/*.pug', ['html']);
   gulp.watch('source/images/**/*', ['images']);
 });
 
