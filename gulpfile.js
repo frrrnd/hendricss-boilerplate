@@ -7,6 +7,7 @@
 var gulp         = require('gulp');
 var pug          = require('gulp-pug');
 var sass         = require('gulp-sass');
+var clean        = require('gulp-clean');
 var watch        = require('gulp-watch');
 var concat       = require('gulp-concat');
 var uglify       = require('gulp-uglify');
@@ -89,6 +90,15 @@ gulp.task('watch', function() {
   gulp.watch('source/javascripts/**/*.js', ['scripts']);
   gulp.watch('source/pug/*.pug', ['html']);
   gulp.watch('source/images/**/*', ['images']);
+});
+
+/*
+  Clean build.
+*/
+
+gulp.task('clean', function() {
+  return gulp.src('build')
+    .pipe(clean());
 });
 
 
